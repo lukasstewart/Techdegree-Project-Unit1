@@ -315,15 +315,23 @@ font-weight: bolder;
 }
 
 .undraw-illustration {
-width: 80%;
-padding-left: 20px;
-padding-top: 30px;
+  width: 80%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hand-note {
+font-family:Cedarville Cursive ;
 }
 
 .undraw-illustration-right {
   width: 80%;
-  padding-left: 60px;
-  padding-top: 30px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   }
 
 ul.skills {
