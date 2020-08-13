@@ -323,7 +323,10 @@ font-weight: bolder;
 }
 
 .hand-note {
-font-family:Cedarville Cursive ;
+display: inline-block;
+font-family:Cedarville Cursive;
+transform: rotate(-10deg);
+font-size: small;
 }
 
 .undraw-illustration-right {
@@ -356,7 +359,7 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 100px 0px 20px;
+  padding: 20px autop auto 20px;
 }
 
 footer .copyright {
