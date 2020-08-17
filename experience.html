@@ -5,31 +5,65 @@
   <title>Lukas Stewart's Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
   <body>
 
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Lukas Stewart</li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience</a></li>
-        </ul>
-    </div>
+    <nav class="main-nav">
+      <ul class="nav">
+        <li class="name"> <a href="experience.html">Lukas Stewart</a></li>
+        <li><a href="index.html" title="Home" class="menu link">Home</a></li>
+        <li><a href="experience.html" title="Experience" class="menu link">Experience</a></li>
+        <li><a href="portfolio.html" title="Portfolio" class="menu link">Portfolio</a></li>
+      </ul>
+    </nav>
 
-    <header>
-      <img src="images/headshot.png" alt="headshot of lukas stewart" class="profile-image">
-      <h1 class="tag name">Hello, I’m Lukas.</h1>
-      <p class="tag location">I'm currently based in Singapore.</p>
+    <header class="header-experience">
+      <img src="images/headshot.png" alt="headshot of lukas stewart" class="profile-image-experience hvr-bob">
+      <h1 class="tag name hvr-float-shadow">Hey there, I’m Lukas.</h1>
+      <p class="tag occupation"><span>Sales Leader</span><span>Front End Web Developer</span></p>
+      <a href="#main"><img src="images/down-arrow.svg" alt="learn more button arrow" class="down-arrow"></a>
     </header>
 
-   
+    <section class="profile-summary">
+      <h2>Profile Summary</h2>
+      <p>I'm a high impact technology sales leader with 6 years of experience cultivating strong customer relationships, driving revenue, and building strategic partnerships on the forefront of enterprise software. Throughout my career I have experienced SaaS sales as part of both a large multinational enterprise as well as pre-series-A startups.</p>
+    </section> 
+    <hr>
+    <main class="main-experience flex" id="main">
+      <section class="education resume-section card-exp">
+        <div class="section-heading">
+          <img src="images/icons8-education-50.png" alt="education icon" class="icon">
+          <h2>Education</h2>
+        </div>
+        <ul>
+          <li>Maastricht University: <em> BSc-International Business</em></li>
+          <li>City University, Hong Kong: <em> BSc-Marketing</em></li>
+        </ul>
+      </section> 
+
+      <section class="work resume-section card-exp">
+        <div class="section-heading">
+          <img src="images/icons8-pencil-48.png" alt="work experience icon" class="icon">
+          <h2>Work Experience</h2>
+        </div>
+        <ul>
+          <li>Flowcast: <em> Regional Enterprise Account Manager </em></li>
+          <li>Cleoo: <em> Head of Sales, Apac</em></li>
+          <li>Google: <em> Inside Sales Executive</em></li>
+
+        </ul>
+      </section> 
+      
+    </main>
     <footer class="main-footer">
       <ul>
-        <li><a href="#" class="social twitter">Twitter</a></li>
-        <li><a href="#" class="social linkedin">LinkedIn</a></li>
-        <li><a href="#" class="social github">Github</a></li>
+        <li><a href="https://www.instagram.com/lukas.stewart/?hl=en" target="_blank" class="social instagram">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/lukasstewart/" target="_blank" class="social linkedin">LinkedIn</a></li>
+        <li><a href="https://github.com/lukasstewart" target="_blank" class="social github">Github</a></li>
       </ul>
-      <p class="copyright">Copyright 2015, Jane Smith</p>
+      <p class="copyright">Copyright 20202, Lukas Stewart</p>
     </footer>
   </body>
   </html>

@@ -10,7 +10,7 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #e9e7eb;
 }
 /* Link Styles */
 
@@ -22,24 +22,29 @@ a:hover {
   color: #6633ff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background: black;
+  z-index: 2;
+  background:rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(20px);
   min-height: 30px;
   padding-bottom: 10px;
   max-height: 50px;
   position: fixed;
   text-align: center;
-  opacity: 75%;
 }
+
 .nav {
   display: flex;
   flex-wrap: wrap;
   font-weight: 400;
   list-style-type: none;
-  --bold: 700;
 }
 
 .nav a{
@@ -55,7 +60,7 @@ a:hover {
   justify-content: space-between;
  
 }
-
+/* bold pseaudo element hidden under nav items: https://css-tricks.com/bold-on-hover-without-the-layout-shift/ */
 .nav a::after {
   content: attr(title);
   height: 0;
@@ -72,12 +77,15 @@ a:hover {
     margin-right: auto;
     color: white;
 }
+
 .nav li {
   padding: 10px
 }
+
 .nav a {
   transition: all .5s;
 }
+
 .nav a:hover {
   color: white;
   font-weight: 800
@@ -103,7 +111,8 @@ header .profile-image {
   margin-bottom: 10px;
 }
 
-/* Bob */
+/* start of animations css */
+/* profile picture hover animation : code adapted from https://ianlunn.github.io/Hover/ */
 @-webkit-keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
@@ -168,7 +177,7 @@ header .profile-image {
   animation-direction: normal, alternate;
 }
 
-/* Float Shadow */
+/* name box hover animation : code adapted from https://ianlunn.github.io/Hover/ */
 .hvr-float-shadow {
   display: inline-block;
   vertical-align: middle;
@@ -209,8 +218,8 @@ header .profile-image {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-}
-
+}  /* end of animations css */
+ 
 .tag {
   background-color: #00000081;
   color: white;
@@ -219,83 +228,45 @@ header .profile-image {
   display: table;
   margin: 10px auto;
 } 
-.location {
+.occupation {
   background-color: transparent;
   color:white;
   letter-spacing: 3px;
   margin-top: 10px;
 }
 
-.learn-more-button {
-color: white;
-opacity:.8;
-font-weight: 100;
-font-size: small;
+.down-arrow  {
+opacity:.7;
 margin-top: 90px;
 margin-bottom: 80px;
 }
 
-.down-arrow {
-  -webkit-animation: fade-out-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
-	        animation: fade-out-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+.down-arrow:hover {
+opacity: 1;
+transform: scale(1.2);
 }
 
 /**
- * ----------------------------------------
- * animation pulsate-down-arrow
- * ----------------------------------------
- */
- @-webkit-keyframes fade-out-bottom {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-}
-@keyframes fade-out-bottom {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-}
-
-/**
-code copied from kard
+ occupation vertical dividers : code adapted from KARD theme (https://www.styleshout.com/free-templates/kards/)
 */
-.location span {
+.occupation span {
   display: inline-block;
 }
-.location span::after {
+.occupation span::after {
 	content: "|";
 	text-align: center;
 	display: inline-block;
 	padding: 0 8px 0 14px;
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.692);
 }
-.location span:first-child::before {
+.occupation span:first-child::before {
 	content: "|";
 	text-align: center;
 	display: inline-block;
 	padding: 0 14px 0 8px;
-	color: rgba(255, 255, 255, 0.3);
-}
-/**
-end code copied from kard
-*/
-.vertbar {
-  font-size: 50px;
-}
+	color: rgba(255, 255, 255, 0.692);
+} /** occupation vertical dividers*/
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
@@ -305,9 +276,10 @@ end code copied from kard
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  box-shadow: 0px 3px 20px -15px rgb(122, 122, 122);
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #420B45;
 }
 
 .emphasis {
@@ -325,8 +297,9 @@ font-weight: bolder;
 .hand-note {
 display: inline-block;
 font-family:Cedarville Cursive;
-transform: rotate(-10deg);
-font-size: small;
+transform: rotate(10deg);
+font-size: .65em;
+vertical-align: 80%;
 }
 
 .undraw-illustration-right {
@@ -359,7 +332,7 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px autop auto 20px;
+  padding: 20px 0px 20px;
 }
 
 footer .copyright {
@@ -429,7 +402,8 @@ a.social:hover {
 
   .nav {
     max-width: 1200px;
-    padding: 0 30px;
+    padding-top: 10px;
+    margin: auto;
   }
 
 
@@ -449,3 +423,96 @@ a.social:hover {
 
 }
 
+/* experience page css */
+.header-experience {
+  text-align: center;
+  background:url(images/8.jpg);
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+ }
+
+.profile-image-experience {
+  margin-top: 90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+  margin-bottom: 10px;
+}
+
+.main-experience {
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.profile-summary {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.section-heading {
+  display: flex;
+}
+
+.education {
+  padding: 20px 40px 40px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+  box-shadow: 0px 3px 20px -15px rgb(122, 122, 122);
+  height: 160px;
+}
+
+.work {
+  padding: 20px 40px 40px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+  box-shadow: 0px 3px 20px -15px rgb(122, 122, 122);
+  height: 160px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  opacity: .8;
+  padding-right: 10px;
+}
+
+.resume-section {
+  text-align: left;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.card-exp:hover {
+  border-color: #ffe602;
+}
+
+/* portfolio page css */
+.header-portfolio {
+  text-align: center;
+  background: url('images/11.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.under-construction {
+  height: 400px;
+  padding-top: 30px;
+}
+
+.under-construction-heading {
+  padding-top: 100px;
+  font-size: 4em;
+}
