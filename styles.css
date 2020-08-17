@@ -32,7 +32,7 @@ html {
   width: 100%;
   z-index: 2;
   background:rgba(0, 0, 0, 0.63);
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); (kept becuase it's a cool effect but commented out due to browser compatability */
   min-height: 30px;
   padding-bottom: 10px;
   max-height: 50px;
@@ -106,7 +106,7 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.521);
   transition: all .5s;
   margin-bottom: 10px;
 }
@@ -296,7 +296,7 @@ font-weight: bolder;
 
 .hand-note {
 display: inline-block;
-font-family:Cedarville Cursive;
+font-family:'Cedarville' Cursive;
 transform: rotate(10deg);
 font-size: .65em;
 vertical-align: 80%;
