@@ -296,7 +296,7 @@ font-weight: bolder;
 
 .hand-note {
 display: inline-block;
-font-family:'Cedarville Cursive';
+font-family: Cedarville Cursive;
 transform: rotate(10deg);
 font-size: .65em;
 vertical-align: 80%;
